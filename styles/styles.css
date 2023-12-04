@@ -1,32 +1,39 @@
 body {
-background-color: aquamarine;
+  background-color: aquamarine;
+  display: flex;
+  align-items: center; /* Alinea verticalmente en el centro */
+  justify-content: center; /* Alinea horizontalmente en el centro */
+  height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+  flex-direction: column;
+  width: 75%;
+  margin: 0 auto; /* Centra horizontalmente */
 }
 
-/* div input + boton */
 .main-section {
-    display: flex;
-    align-items: center; /* Alinea verticalmente en el centro */
-    justify-content: center; /* Alinea horizontalmente en el centro */
-    height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
-    flex-direction: column;
+  display: flex;
+  align-items: center; /* Alinea verticalmente en el centro */
+  flex-direction: column;
 }
-/* input group */
 
 .input-group {
-width: 600px;
-background-color: rgb(32, 85, 134);
-padding: 85px;
+  width: 100%; /* Cambiado a 100% para ocupar todo el ancho de .main-section */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente los elementos dentro de .input-group */
+  margin-bottom: 8px; /* Ajusta según sea necesario */
 }
 
-/* BOTON INPUT */
-#button-addon2 {
-    background-color: #fff;    
+#btnAddItem {
+  background-color: #fff;
 }
 
-/* div de listados */
+.divTareas {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  margin: 0 auto; /* Centra horizontalmente */
+  padding: 20px; /* Ajusta según sea necesario */
+  background-color: rgb(32, 85, 134);
+  color: #fff;
+}
 
-.div-tareas {
-    width: 600px;
-    background-color: rgb(72, 130, 185);
-    padding: 85px;
+#divTareasAdd {
+    margin-top: 10px;
 }
