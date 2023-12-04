@@ -1,0 +1,32 @@
+body {
+background-color: aquamarine;
+}
+
+/* div input + boton */
+.main-section {
+    display: flex;
+    align-items: center; /* Alinea verticalmente en el centro */
+    justify-content: center; /* Alinea horizontalmente en el centro */
+    height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+    flex-direction: column;
+}
+/* input group */
+
+.input-group {
+width: 600px;
+background-color: rgb(32, 85, 134);
+padding: 85px;
+}
+
+/* BOTON INPUT */
+#button-addon2 {
+    background-color: #fff;    
+}
+
+/* div de listados */
+
+.div-tareas {
+    width: 600px;
+    background-color: rgb(72, 130, 185);
+    padding: 85px;
+}
