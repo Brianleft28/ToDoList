@@ -5,7 +5,7 @@ body {
   justify-content: center; /* Alinea horizontalmente en el centro */
   height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
   flex-direction: column;
-  width: 75%;
+  width: 55%;
   margin: 0 auto; /* Centra horizontalmente */
 }
 
@@ -13,6 +13,7 @@ body {
   display: flex;
   align-items: center; /* Alinea verticalmente en el centro */
   flex-direction: column;
+  width: 100%;
 }
 
 .input-group {
@@ -36,4 +37,6 @@ body {
 
 #divTareasAdd {
     margin-top: 10px;
+
+
 }
