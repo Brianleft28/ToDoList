@@ -17,25 +17,31 @@ function agregarElemento() {
     // Verificar que el input no esté vacío
     if (inputValue.trim() !== '') {
         // Crear un nuevo elemento de lista (li)
-        const nuevoElemento = document.createElement('li');
-        
+        const nuevoElemento = document.createElement('p');
         // Asignar el texto del input al elemento de lista
         nuevoElemento.textContent = inputValue;
+        // Aplicar estilo al elemento li recién creado
+        nuevoElemento.style.padding = '8px'; // Añade un relleno al elemento li
+        nuevoElemento.style.borderBottom = '1px solid #ccc'; // Añade un borde inferior
 
         // Obtener el contenedor de la lista (ul)
         const listaContainer = document.getElementById('listaContainer');
 
-        // Crear un nuevo elemento de lista desordenada (ul) si no existe
-        if (!listaContainer.querySelector('ul')) {
-            const nuevaLista = document.createElement('ul');
+        // Crear un nuevo contenedor (div) si no existe
+        if (!listaContainer.querySelector('div')) {
+            const nuevaLista = document.createElement('div');
+            nuevaLista.style.padding = '5px';      
+            nuevaLista.style.backgroundColor = '#000';
+            nuevaLista.style.width = '100%';
+            nuevaLista.style.display = 'block';
+            nuevaLista.style.color = '#fff';
             listaContainer.appendChild(nuevaLista);
         }
-
         // Agregar el nuevo elemento de lista al elemento de lista desordenada
-        listaContainer.querySelector('ul').appendChild(nuevoElemento);
+        listaContainer.querySelector('div').appendChild(nuevoElemento);
 
         // Limpiar el contenido del input después de agregar a la lista
-        document.getElementById('inputText').value = '';
+        document.getElementById('inputTask').value = '';
     } else {
         alert('Ingrese información válida antes de agregar a la lista.');
     }
@@ -43,6 +49,7 @@ function agregarElemento() {
 
     btnADD.addEventListener('click', (e) => {
         ocultarIngreseTarea()
+        agregarElemento()
 
     })
 })
