@@ -1,42 +1,5 @@
+/* ESTILO DE BODY */
 body {
-  background-color: aquamarine;
-  display: flex;
-  align-items: center; /* Alinea verticalmente en el centro */
-  justify-content: center; /* Alinea horizontalmente en el centro */
-  height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
-  flex-direction: column;
-  width: 55%;
-  margin: 0 auto; /* Centra horizontalmente */
-}
-
-.main-section {
-  display: flex;
-  align-items: center; /* Alinea verticalmente en el centro */
-  flex-direction: column;
-  width: 100%;
-}
-
-.input-group {
-  width: 100%; /* Cambiado a 100% para ocupar todo el ancho de .main-section */
-  display: flex;
-  justify-content: center; /* Centra horizontalmente los elementos dentro de .input-group */
-  margin-bottom: 8px; /* Ajusta según sea necesario */
-}
-
-#btnAddItem {
-  background-color: #fff;
-}
-
-.divTareas {
-  width: 100%; /* Ocupa todo el ancho disponible */
-  margin: 0 auto; /* Centra horizontalmente */
-  padding: 20px; /* Ajusta según sea necesario */
-  background-color: rgb(32, 85, 134);
-  color: #fff;
-}
-
-#divTareasAdd {
-    margin-top: 10px;
-
-
+  margin: 0;
+  
 }
