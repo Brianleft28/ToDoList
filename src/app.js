@@ -91,6 +91,15 @@ function eliminarTarea(tarea) {
       guardarTareas();
     }
   }
+
+  // función para guardar tareas en el local storage
+  function guardarTareas(){
+    const tareas = [];
+    const listaTareas = document.querySelector('#taskList li')
+
+  }
+
+
 // eventos Boton AddTask
 
 btnAddTask.addEventListener("click", (e) => {
