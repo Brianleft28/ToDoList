@@ -44,6 +44,7 @@ input {
 
 #taskList {
   width: 50%;
+  margin: 0.5px;
   padding: 10px;
   text-align: left;
   font-weight: bold;
@@ -51,8 +52,10 @@ input {
   height: auto;
   background-color: #7c7c7c;
   border-top: 2px solid rgb(98, 98, 202);
-  margin-top: 0;
   list-style: none;
+  position: relative;
+  max-height: 280px; /* Establecer una altura máxima para el contenedor */
+  overflow-y: auto; /* Permitir el desplazamiento vertical dentro del contenedor */
 }
 
 #taskList li {
@@ -60,10 +63,10 @@ input {
   margin: 0;
   padding: 15px;
   color: #fff;
-  animation: 0.2s all; 
+  
 }
 #taskList li:hover {
-  padding: 20px;
+  padding: 17px;
   text-align: left;
   font-weight: bold;
   align-items: center;
@@ -71,7 +74,13 @@ input {
   height: auto;
   border-bottom: 0.5px solid #b8b8b8;
   border-top: 0.5px solid #b8b8b8;
-  color: #b8b8b8;
+  color: #fff;
   background-color: #383838;
   margin-top: 0;
 }
+.btn_li {
+float: right;
+
+
+}
+
