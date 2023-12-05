@@ -8,8 +8,6 @@ function añadirTarea() {
     const nuevaTarea = document.createElement("li");
     nuevaTarea.textContent = tareaNueva;
 
-
-
     // BTN EDITAR TAREA
     const btnEditar = document.createElement('button');
     btnEditar.textContent = 'Editar';
@@ -36,16 +34,54 @@ function añadirTarea() {
   }
 }
 
-
 // funciones editar tarea - eliminar tarea 
 
-function editarTarea() {
-    // prox
-}
-function eliminarTarea(){
-    // prox
-}
+function editarTarea(tarea) {
+  // Crear un input para editar
+  const inputEditar = document.createElement('input');
+  inputEditar.type = 'text';
+  inputEditar.value = tarea.textContent;
 
+  // Crear un botón "Guardar Cambios"
+  const btnGuardarCambios = document.createElement('button');
+  btnGuardarCambios.textContent = 'Guardar Cambios';
+  btnGuardarCambios.onclick = function() {
+    guardarCambios(tarea, inputEditar);
+  };
+
+  // Reemplazar el contenido de la tarea con el input y el botón
+  tarea.innerHTML = '';
+  tarea.appendChild(inputEditar);
+  tarea.appendChild(btnGuardarCambios);
+
+  // Enfocar el input para facilitar la edición
+  inputEditar.focus();
+}
+function guardarCambios(tarea, inputEditar) {
+    const nuevoTexto = inputEditar.value;
+    tarea.textContent = nuevoTexto;
+  
+    // Limpiar el contenido y volver a agregar los botones
+    const btnEditar = document.createElement('button');
+    btnEditar.textContent = 'Editar';
+    btnEditar.className = 'btn-primary btn_li ms-1';
+    btnEditar.onclick = function () {
+      editarTarea(tarea);
+    };
+  
+    const btnEliminar = document.createElement('button');
+    btnEliminar.textContent = 'X';
+    btnEliminar.className = 'btn-danger btn_li ms-1';
+    btnEliminar.onclick = function() {
+      eliminarTarea(tarea);
+    };
+  
+    tarea.appendChild(btnEditar);
+    tarea.appendChild(btnEliminar);
+  
+    // Guardar tareas actualizadas en localStorage
+    guardarTareas();
+  }
 
 // eventos Boton AddTask
 
