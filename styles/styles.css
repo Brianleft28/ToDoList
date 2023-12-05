@@ -11,7 +11,7 @@ body {
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  width: 75%;
+  width: 55%;
   height: 100vh;
   background-color: #110b18 !important;
   border-right: 3px solid #b1afaf;
@@ -44,11 +44,34 @@ input {
 
 #taskList {
   width: 50%;
-  padding: 20px;
-  text-align: center;
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
   align-items: center;
   height: auto;
-  background-color: #b1afaf;
+  background-color: #7c7c7c;
   border-top: 2px solid rgb(98, 98, 202);
+  margin-top: 0;
+  list-style: none;
+}
+
+#taskList li {
+  background-color: #535353;
+  margin: 0;
+  padding: 15px;
+  color: #fff;
+  animation: 0.2s all; 
+}
+#taskList li:hover {
+  padding: 20px;
+  text-align: left;
+  font-weight: bold;
+  align-items: center;
+  cursor: pointer;
+  height: auto;
+  border-bottom: 0.5px solid #b8b8b8;
+  border-top: 0.5px solid #b8b8b8;
+  color: #b8b8b8;
+  background-color: #383838;
   margin-top: 0;
 }
