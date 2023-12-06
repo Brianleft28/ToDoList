@@ -7,7 +7,7 @@ function añadirTarea() {
   if (tareaNueva.trim() !== "") {
     const nuevaTarea = document.createElement("li");
     nuevaTarea.textContent = tareaNueva;
-
+    guardarTareas()
     // BTN EDITAR TAREA
     const btnEditar = document.createElement("button");
     btnEditar.textContent = "Editar";
@@ -79,26 +79,32 @@ function guardarCambios(tarea, inputEditar) {
 
   tarea.appendChild(btnEditar);
   tarea.appendChild(btnEliminar);
-  
+
   // Guardar tareas actualizadas en localStorage
   guardarTareas();
 }
 
 function eliminarTarea(tarea) {
-    if (confirm('¿Estás seguro de que quieres eliminar esta tarea?')) {
-      tarea.remove();
-      // Guardar tareas actualizadas en localStorage
-      guardarTareas();
-    }
+  if (confirm("¿Estás seguro de que quieres eliminar esta tarea?")) {
+    tarea.remove();
+    // Guardar tareas actualizadas en localStorage
+    guardarTareas();
   }
+}
 
-  // función para guardar tareas en el local storage
-  function guardarTareas(){
-    const tareas = [];
-    const listaTareas = document.querySelector('#taskList li')
+// función para guardar tareas en el local storage
+function guardarTareas() {
+  const tarea = [];
+  const listaTareas = document.querySelector("#taskList li");
 
-  }
-
+  listaTareas.forEach((tarea) => {
+    const tareaInfo = {
+        texto: tarea.textContent
+    };
+    tarea.push(tareaInfo)
+  });
+  localStorage.setItem('misTareas', JSON.stringify(tarea));
+}
 
 // eventos Boton AddTask
 
